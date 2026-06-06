@@ -16,89 +16,99 @@
   <div class="bg-orb orb-2"></div>
   <div class="bg-grid"></div>
 
-  <main class="app-shell">
-    <aside class="sidebar glass reveal" aria-label="Project information">
-      <div class="brand-row">
-        <div class="brand-logo" aria-hidden="true">N</div>
-        <div>
-          <h1>Nexa</h1>
-          <p class="subtext">
-            A rule-based chatbot that replies to user messages using predefined keyword matching.
+  <div class="page-wrap">
+    <main class="app-shell">
+      <aside class="sidebar glass reveal" aria-label="Project information">
+        <div class="brand-row">
+          <div class="brand-logo" aria-hidden="true">N</div>
+          <div>
+            <h1>Nexa</h1>
+            <p class="subtext">
+              A rule-based chatbot that replies to user messages using predefined keyword matching.
+            </p>
+          </div>
+        </div>
+
+        <section class="glass-card float-card">
+          <h2>About Nexa</h2>
+          <p>
+            Nexa is a rule-based AI chatbot that uses keyword matching and predefined response logic to simulate basic human-computer conversation. It is designed as a beginner-friendly project for exploring conversational AI and NLP fundamentals.
           </p>
-        </div>
-      </div>
+        </section>
 
-      <section class="glass-card float-card">
-        <h2>About Nexa</h2>
-        <p>
-          Nexa is a rule-based AI chatbot that uses keyword matching and predefined response logic to simulate basic human-computer conversation. It is designed as a beginner-friendly project for exploring conversational AI and NLP fundamentals.
-        </p>
+        <section class="glass-card reveal">
+          <h2>Quick prompts</h2>
+          <div class="chips">
+            <button class="chip" type="button">Hello</button>
+            <button class="chip" type="button">Who are you?</button>
+            <button class="chip" type="button">What can you do?</button>
+            <button class="chip" type="button">Tell me a joke</button>
+            <button class="chip" type="button">How are you?</button>
+            <button class="chip" type="button">Thank you</button>
+            <button class="chip" type="button">Bye</button>
+          </div>
+        </section>
+
+        <section class="glass-card reveal">
+          <h2>Features</h2>
+          <ul class="feature-list">
+            <li>Rule-based chatbot responses</li>
+            <li>Interactive quick prompt buttons</li>
+            <li>Keyword and pattern-based query matching</li>
+            <li>Accessible live chat structure</li>
+            <li>Responsive chat interface</li>
+          </ul>
+        </section>
+      </aside>
+
+      <section class="chat-panel glass reveal" aria-label="Chat interface">
+        <header class="chat-header">
+          <div>
+            <p class="eyebrow">Virtual Rule-Based Assistant</p>
+            <h2>Chat with Nexa</h2>
+          </div>
+
+          <div class="header-actions">
+            <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme">☾</button>
+            <span class="status-pill">Online</span>
+          </div>
+        </header>
+
+        <div
+          id="chatBox"
+          class="chat-box"
+          aria-live="polite"
+          aria-atomic="false"
+          tabindex="0"
+          aria-label="Chatbot conversation"
+        >
+          <div class="message bot bubble-in">
+            <p>Hello! I’m Nexa, your rule-based chatbot. Try saying hello, ask for help, or request a joke.</p>
+            <small>Bot</small>
+          </div>
+        </div>
+
+        <form id="chatForm" class="composer">
+          <label for="userInput">Type your message</label>
+          <div class="input-row">
+            <textarea
+              id="userInput"
+              placeholder="Ask something..."
+              required
+              rows="1"
+              aria-describedby="chatHint"
+            ></textarea>
+            <button type="submit" class="send-btn">Send</button>
+          </div>
+          <p class="hint" id="chatHint">Nexa could make mistakes! Please double-check the responses.</p>
+        </form>
       </section>
+    </main>
 
-      <section class="glass-card reveal">
-        <h2>Quick prompts</h2>
-        <div class="chips">
-          <button class="chip" type="button">Hello</button>
-          <button class="chip" type="button">Who are you?</button>
-          <button class="chip" type="button">What can you do?</button>
-          <button class="chip" type="button">Tell me a joke</button>
-          <button class="chip" type="button">How are you?</button>
-          <button class="chip" type="button">Thank you</button>
-          <button class="chip" type="button">Bye</button>
-        </div>
-      </section>
-
-      <section class="glass-card reveal">
-        <h2>Features</h2>
-        <ul class="feature-list">
-          <li>Rule-based chatbot responses</li>
-          <li>Interactive quick prompt buttons</li>
-          <li>Keyword and pattern-based query matching</li>
-          <li>Accessible live chat structure</li>
-          <li>Responsive chat interface</li>
-        </ul>
-      </section>
-    </aside>
-
-    <section class="chat-panel glass reveal" aria-label="Chat interface">
-      <header class="chat-header">
-        <div>
-          <p class="eyebrow">Virtual Rule-Based Assistant</p>
-          <h2>Chat with Nexa</h2>
-        </div>
-
-        <div class="header-actions">
-          <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme">☾</button>
-          <span class="status-pill">Online</span>
-        </div>
-      </header>
-
-      <div id="chatBox" class="chat-box" aria-live="polite" tabindex="0" aria-label="Chatbot conversation">
-        <div class="message bot bubble-in">
-          <p>Hello! I’m Nexa, your rule-based chatbot. Try saying hello, ask for help, or request a joke.</p>
-          <small>Bot</small>
-        </div>
-      </div>
-
-      <form id="chatForm" class="composer">
-        <label for="userInput">Type your message</label>
-        <div class="input-row">
-          <textarea
-            id="userInput"
-            placeholder="Ask something..."
-            required
-            aria-describedby="chatHint"
-          ></textarea>
-          <button type="submit" class="send-btn">Send</button>
-        </div>
-        <p class="hint" id="chatHint">Nexa could make mistakes! Please double-check the responses.</p>
-      </form>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>Created by <span>Xplok</span> • AI Internship Project</p>
-  </footer>
+    <footer class="site-footer">
+      <p>Created by <span>Xplok</span> • AI Internship Project</p>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
